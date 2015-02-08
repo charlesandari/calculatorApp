@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold_bg" translatesAutoresizingMaskIntoConstraints="NO" id="AKf-v4-Ku2">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MRq-Yo-oEj">
+                                <rect key="frame" x="181" y="28" width="238" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="OF4-ac-TUx"/>
+                                    <constraint firstAttribute="width" constant="238" id="PkX-CG-TG6"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="CA"/>
+                                    <segment title="CHI"/>
+                                    <segment title="NY"/>
+                                </segments>
+                                <color key="tintColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVy-gs-rxY">
+                                <rect key="frame" x="187" y="298" width="226" height="50"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="RESULT">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="48" name="HelveticaNeue-Light"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uBP-dD-2p0">
+                                <rect key="frame" x="103" y="93" width="394" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYM-P8-MLH">
+                                        <rect key="frame" x="223" y="29" width="131" height="42"/>
+                                        <color key="backgroundColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Calculate Tax">
+                                            <color key="titleColor" red="0.76078431372549016" green="0.58039215686274515" blue="0.039215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layers.maskToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onCalculateButtonTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LWX-vo-vdO"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gD7-vR-GKd">
+                                        <rect key="frame" x="39" y="35" width="154" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="priceTextField:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="kKz-Ia-V2h"/>
+                                            <action selector="textField:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="q0H-0U-hFp"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="394" id="c2X-3n-EDP"/>
+                                    <constraint firstAttribute="height" constant="100" id="slW-dX-ydO"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AKf-v4-Ku2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="9qb-J7-fJS"/>
+                            <constraint firstAttribute="centerX" secondItem="MRq-Yo-oEj" secondAttribute="centerX" id="Ejy-rX-yqm"/>
+                            <constraint firstAttribute="centerX" secondItem="FVy-gs-rxY" secondAttribute="centerX" id="F0Q-SY-C17"/>
+                            <constraint firstItem="AKf-v4-Ku2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" id="FIF-qy-CkZ"/>
+                            <constraint firstItem="uBP-dD-2p0" firstAttribute="top" secondItem="MRq-Yo-oEj" secondAttribute="bottom" constant="37" id="PX3-0C-IC7"/>
+                            <constraint firstItem="MRq-Yo-oEj" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="S0q-nU-yZW"/>
+                            <constraint firstAttribute="centerX" secondItem="uBP-dD-2p0" secondAttribute="centerX" id="izp-xo-T05"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="AKf-v4-Ku2" secondAttribute="bottom" id="mia-S0-nRk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AKf-v4-Ku2" secondAttribute="trailing" constant="-16" id="zxg-ZL-7UL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="priceTextField" destination="gD7-vR-GKd" id="2jz-bD-fLv"/>
+                        <outlet property="resultLabel" destination="FVy-gs-rxY" id="vRv-V8-w2n"/>
+                        <outlet property="segmentedControl" destination="MRq-Yo-oEj" id="2ko-C0-ZqU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gold_bg" width="160" height="284"/>
+    </resources>
+</document>
